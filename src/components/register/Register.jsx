@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { alertSuccess, alertError } from '../../utils/alertCustom';
 import { messages } from '../../utils/configs';
 import { endPoints } from '../../utils/configs';
-import axios from 'axios';
+import clientAxios from '../../utils/clientAxios';
+
 
 const Register = () => {
-  const URL_BASE = process.env.REACT_APP_URL_BASE;
   const [userData, setUserData] = useState({
     email: '',
     password: '',
@@ -41,7 +41,7 @@ const Register = () => {
       return;
     }
     try {
-      const { data } = await axios.post(`${URL_BASE}${endPoints.register}/create-user`, userData);
+      const { data } = await clientAxios.post(`${endPoints.register}/create-user`, userData);
       alertSuccess(messages.logSuccess, data, () => {window.location.href = 'http://localhost:3000/home'});
     } catch (err) {
       alertError(`${err.response.data.errors[0].msg}`, 'Error', () => {console.log(err)});
