@@ -1,5 +1,4 @@
 import React from 'react';
-import Main from '../components/main/Main';
 import { endPoints } from '../utils/configs';
 import clientAxios from '../utils/clientAxios';
 

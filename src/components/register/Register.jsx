@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { alertSuccess, alertError } from '../../utils/alertCustom';
 import { messages } from '../../utils/configs';
 import { endPoints } from '../../utils/configs';

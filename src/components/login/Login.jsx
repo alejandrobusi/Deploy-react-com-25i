@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { alertSuccess, alertError } from '../../utils/alertCustom';
-import { messages } from '../../utils/configs';
+import React, { useState } from 'react';
+import { alertError } from '../../utils/alertCustom';
 import { endPoints } from '../../utils/configs';
 import clientAxios from '../../utils/clientAxios';
 
